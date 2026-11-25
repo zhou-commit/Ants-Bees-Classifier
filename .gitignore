@@ -1,0 +1,54 @@
+# ============================================================
+#  Learn_torch  ——  .gitignore
+#  目的：保护数据隐私、排除大文件与本机环境，只上传源码
+# ============================================================
+
+# ---------- 1. 数据集（隐私 + 体积大，不上传；克隆者需自备数据）----------
+origin_data/
+# 若想保留目录结构、仅忽略内容，可改用下面两行：
+# origin_data/**
+# !origin_data/.gitkeep
+
+# ---------- 2. 模型权重 / checkpoint（二进制大文件，含训练成果）----------
+*.pth
+*.pt
+*.ckpt
+checkpoint/
+
+# ---------- 3. 训练日志与可视化（TensorBoard event 文件）----------
+logs/
+runs/
+event.out.tfevents.*
+*.tfevents.*
+
+# ---------- 4. 运行截图 / 结果图片（含本机路径信息）----------
+pictures/
+shot*.jpg
+shot*.png
+
+# ---------- 5. Python 缓存与打包产物 ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# ---------- 6. IDE / 编辑器配置（本机个性化，易泄露路径）----------
+.idea/
+.vscode/
+*.iml
+
+# ---------- 7. 操作系统杂项 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 8. 密钥与环境变量（防止误传隐私/凭证）----------
+.env
+.env.*
+*.key
+credentials.json
