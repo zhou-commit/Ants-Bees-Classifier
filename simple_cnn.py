@@ -112,5 +112,3 @@ for epoch in range(10):                     # 设置学习的轮次
 print('-----------------------------')
 print("更新后权重：",after)
 print("最终loss的加和：", running_loss)         # 其实就是最后一个epoch的三个batch的result_loss的和
-
-git config --global --list
